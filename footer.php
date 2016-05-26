@@ -14,10 +14,10 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+		<div class="site-info row">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'realty' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'realty' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'realty' ), 'realty', '<a href="http://awothemes.ru" rel="designer">Awothemes</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'realty' ), '<a target="blank" href="https://awothemes.pro/themes/realty">Realty</a>', '<a target="blank href="https://awothemes.ru" rel="designer">Awothemes</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

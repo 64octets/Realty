@@ -9,7 +9,10 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+<div id="content" class="site-content row">
+
+	<div id="primary" class="content-area nine columns">
+	
 		<main id="main" class="site-main" role="main">
 
 			<section class="error-404 not-found">
@@ -17,13 +20,15 @@ get_header(); ?>
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'realty' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<div class="page-content">
+				<div class="page-content row">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'realty' ); ?></p>
 
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
+					<div class="row">
+						<div class="four columns">
+							<?php get_search_form();?>
+						</div>
+					</div>
+					<?php	the_widget( 'WP_Widget_Recent_Posts' );
 
 						// Only show the widget if site has multiple categories.
 						if ( realty_categorized_blog() ) :

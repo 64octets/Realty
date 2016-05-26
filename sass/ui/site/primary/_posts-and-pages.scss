@@ -1,0 +1,92 @@
+.site-content {
+    margin-top: 50px;
+}
+#posts-container {
+    margin-left: -2rem;
+	
+	@include respond(all-phones){ 
+		margin-left: 0rem;
+	}
+}
+
+.blogroll.post {
+    position: relative;
+	padding-bottom: 0em;
+    width: 49.5%;
+    padding-left: 2rem;
+	
+	@include respond(all-phones){ 
+		width: 100%;
+		padding-left: 0;
+	}
+}
+
+.blogroll.post img {
+    position: relative;
+    display: table;
+}
+.blogroll.post .entry-header {
+    position: absolute !important;
+    z-index: 1;
+    bottom: 0 !important;
+    padding: 0.8em 1em;
+    background: rgba(0,0,0,0.5);
+	
+	.entry-meta{
+		color:#fff;
+		font-size: 0.8rem;
+		span{
+			color:#fff;
+			font-size: 0.8rem;
+			a{
+				color:#fff;
+				font-size: 0.8rem;
+			}
+		}	
+	}
+	.entry-title{
+		color:#fff;
+		a{
+			color:#fff;
+			text-decoration:none;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+	}
+}
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 3em;
+}
+.entry-meta {
+    margin-bottom: 0em;
+}
+.bypostauthor {
+	display: block;
+}
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+

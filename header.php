@@ -22,29 +22,31 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'realty' ); ?></a>
-
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+		<div class="header-top row">
+			<div class="three columns">
+				<div class="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></div>
+			</div>
+			<div class="field three columns push_six">
+				<?php get_search_form();?>
+			</div>
+		</div>
+		<!-- container to normalize fixed navigation behavior when scrolling -->
+		<div class="navcontain">
+			<div class="navbar" gumby-fixed="top" id="nav3">
+				<div class="row">
+					<?php 
+					$menu_name = 'primary';
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+					if( has_nav_menu('primary') ){
+						echo '<a class="toggle" gumby-trigger="#nav3 > .row > ul" href="#"><i class="icon-menu"></i></a>';
+						wp_nav_menu( array( 'theme_location' => 'primary', 'container'=>'', 'fallback_cb' =>'', 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>', 'walker' => new realty_walker) );
+					}
+					else 
+						echo '<ul><li><a href="' . esc_url( home_url('/') ) . '/wp-admin/nav-menus.php">Go to "Appearance - Menus" to set-up menu</a></li></ul>';	
+					?>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'realty' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+				</div>
+			</div>
+		</div>
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
