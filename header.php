@@ -25,7 +25,15 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="header-top row">
 			<div class="three columns">
-				<div class="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></div>
+						<?php 
+						$custom_logo_id = get_theme_mod( 'custom_logo' );
+						$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );						
+						if (!$image[0]):?>
+							<div class="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></div>
+						<?php else :?>
+							<div class="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo $image[0]; ?>"></a></div>
+						<?php endif;?>	
+						
 			</div>
 			<div class="field three columns push_six">
 				<?php get_search_form();?>

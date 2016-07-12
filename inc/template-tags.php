@@ -119,3 +119,14 @@ function realty_category_transient_flusher() {
 }
 add_action( 'edit_category', 'realty_category_transient_flusher' );
 add_action( 'save_post',     'realty_category_transient_flusher' );
+
+/**
+ * Output custom logo.
+ */
+function realty_the_custom_logo() {
+	
+	if ( function_exists( 'the_custom_logo' ) ) {
+		the_custom_logo();
+	}
+
+}

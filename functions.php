@@ -42,7 +42,14 @@ function realty_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size('realty-post-thumb', 400, 9999, array( 'center', 'center')  );
+	
+	/*
+	 * Enable support for site logo.
+	 */
+	add_image_size( 'realty-logo', 270, 60 );
+	add_theme_support( 'custom-logo', array( 'size' => 'realty-logo', 'flex-height' => true, 'flex-width'  => true, 'header-text' => array( 'site-title', 'site-description' ) ) );
 
+	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'realty' ),
