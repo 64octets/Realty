@@ -1749,6 +1749,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 .header-top { padding-top: 2em; padding-bottom: 2em; }
 
 .logo a { font-size: 3rem; line-height: 1; text-transform: uppercase; text-decoration: none; }
+.logo a img { display: table-cell; vertical-align: middle; }
 @media only screen and (max-width: 767px) { .logo { margin-bottom: 2em; } }
 
 /* Search form */
