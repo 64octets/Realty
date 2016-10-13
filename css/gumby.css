@@ -16,7 +16,6 @@
 * Free to use under the MIT license.
 * http://www.opensource.org/licenses/mit-license.php
 */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
 html { line-height: 1; }
@@ -1703,7 +1702,7 @@ table.rounded thead th, table.rounded thead td, table.rounded caption + tbody tr
 #posts-container { margin-left: -2rem; }
 @media only screen and (max-width: 767px) { #posts-container { margin-left: 0rem; } }
 
-.blogroll.post { position: relative; padding-bottom: 0em; width: 49.5%; padding-left: 2rem; }
+.blogroll.post { position: relative; padding-bottom: 0em; width: 49.5%; padding-left: 2rem; min-height: 75px; }
 @media only screen and (max-width: 767px) { .blogroll.post { width: 100%; padding-left: 0; } }
 
 .blogroll.post img { position: relative; display: table; }

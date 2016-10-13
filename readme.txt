@@ -1,4 +1,4 @@
-=== Realty ===
+Realty WordPress theme is licensed under the GNU General Public License (http://www.gnu.org/licenses/gpl-3.0.html)
 
 Realty Uses:
 - Entypo (http://www.entypo.com/),  licensed under SIL Open Font License (OFL).(http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)

@@ -31,7 +31,7 @@
 						if (!$image[0]):?>
 							<div class="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><?php bloginfo( 'name' ); ?></a></div>
 						<?php else :?>
-							<div class="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo $image[0]; ?>"></a></div>
+							<div class="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo esc_url( $image[0] ); ?>"></a></div>
 						<?php endif;?>	
 						
 			</div>
